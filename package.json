@@ -1,6 +1,6 @@
 {
   "name": "grunt-mongo-change-scripts",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Grunt plugin for running and marking change scripts as done using Mongo DB",
   "homepage": "https://github.com/meilke/grunt-mongo-change-scripts",
   "main": "tasks/task.js",
