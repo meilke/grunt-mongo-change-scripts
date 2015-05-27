@@ -23,13 +23,20 @@ Add this to your Grunt configuration:
 ```js
 grunt-mongo-change-scripts: {
   options: {
-    options = {
-      host: 'some.host', // the Mongo DB host
-      db: 'somedb', // the Mongo DB name
-      src: 'test/scripts/*.js', // path to the change scripts
-      mongoBinary: 'path/to/mongo', // path to Mongo executable
-      storedScriptsCollection: 'change_scripts_go_in_here' // Mongo DB collection name to store change scripts already executed
-    }
+    // the Mongo DB host
+    host: 'some.host',
+
+    // the Mongo DB name
+    db: 'somedb',
+
+    // path to the change scripts
+    src: 'test/scripts/*.js',
+
+    // path to Mongo executable
+    mongoBinary: 'path/to/mongo',
+
+    // Mongo DB collection name to store change scripts already executed
+    storedScriptsCollection: 'change_scripts_go_in_here'
   },
   do: {}
 }
