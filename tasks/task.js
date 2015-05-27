@@ -5,7 +5,7 @@ module.exports = function (grunt) {
     var options = this.options();
     
     var repository = require('./repository.js')(options);
-    var runner = require('./run.js')(options);
+    var runner = require('./run.js')(options, grunt.log);
     var orchestrate = require('./orchestrate.js')(options, repository, runner, grunt);
 
     orchestrate.conduct().then(done);

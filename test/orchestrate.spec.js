@@ -7,7 +7,7 @@ var expect = require('expect.js'),
     repository,
     runner;
 
-describe('The change script runner', function () {
+describe('The orchestrator', function () {
 
   beforeEach(function () {
     grunt.log = {
