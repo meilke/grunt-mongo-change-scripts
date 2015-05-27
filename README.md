@@ -1,3 +1,9 @@
+[![Build Status](https://api.travis-ci.org/meilke/grunt-mongo-change-scripts.png)](https://travis-ci.org/meilke/grunt-mongo-change-scripts)
+[![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
+[![NPM version](https://badge.fury.io/js/grunt-mongo-change-scripts.svg)](http://badge.fury.io/js/grunt-mongo-change-scripts)  
+[![Code Climate](https://codeclimate.com/github/meilke/grunt-mongo-change-scripts/badges/gpa.svg)](https://codeclimate.com/github/meilke/grunt-mongo-change-scripts)
+[![Test Coverage](https://codeclimate.com/github/meilke/grunt-mongo-change-scripts/badges/coverage.svg)](https://codeclimate.com/github/meilke/grunt-mongo-change-scripts)  
+
 # grunt-mongo-change-scripts
 
 This will run Mongo DB scripts and save that it is run so that you only run it once.
