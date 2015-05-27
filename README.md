@@ -3,6 +3,10 @@
 [![NPM version](https://badge.fury.io/js/grunt-mongo-change-scripts.svg)](http://badge.fury.io/js/grunt-mongo-change-scripts)  
 [![Code Climate](https://codeclimate.com/github/meilke/grunt-mongo-change-scripts/badges/gpa.svg)](https://codeclimate.com/github/meilke/grunt-mongo-change-scripts)
 [![Test Coverage](https://codeclimate.com/github/meilke/grunt-mongo-change-scripts/badges/coverage.svg)](https://codeclimate.com/github/meilke/grunt-mongo-change-scripts/coverage)
+[![Dependency Status](https://david-dm.org/meilke/grunt-mongo-change-scripts.svg)](https://david-dm.org/meilke/grunt-mongo-change-scripts)
+[![devDependency Status](https://david-dm.org/meilke/grunt-mongo-change-scripts/dev-status.svg)](https://david-dm.org/meilke/grunt-mongo-change-scripts#info=devDependencies)  
+[![forthebadge](http://forthebadge.com/images/badges/uses-badges.svg)](http://forthebadge.com)
+
 
 # grunt-mongo-change-scripts
 
