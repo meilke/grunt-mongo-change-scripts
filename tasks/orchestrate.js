@@ -18,32 +18,35 @@ function initialize(_options_, _repository_, _runner_, _grunt_) {
 }
 
 function conduct() {
-  return repository.findAllStoredScripts()
+  return repository
+    .findAllStoredScripts()
     .then(runAllScriptsIfNecessary)
     .then(repository.storeScripts);
 }
 
 function runAllScriptsIfNecessary(storedScripts) {
-  var scripts = grunt.file.expand(options.src).sort();
-  var scriptsActuallyRun = [];
+  var onlyNonStoredScripts = function (script) {
+    return storedScripts.indexOf(script) < 0;
+  };
 
-  _(scripts).forEach(function (script) {
-    var runScript = storedScripts.indexOf(script) < 0;
-    if (runScript) {
-      try {
-        grunt.log.writeln();
-        grunt.log.writeln('---------------------------------------------');
-        grunt.log.writeln('Running: ' + script);
-        grunt.log.writeln('---------------------------------------------');
-        grunt.log.writeln();
-        runner.runScript(script);
-        scriptsActuallyRun.push(script);
-      }
-      catch(err) {
-        grunt.log.warn('Error occurred : ' + err);
-      }
+  var runScripts = function (script) {
+    try {
+      grunt.log.writeln();
+      grunt.log.writeln('---------------------------------------------');
+      grunt.log.writeln('Running: ' + script);
+      grunt.log.writeln('---------------------------------------------');
+      grunt.log.writeln();
+      runner.runScript(script);
+      return script;
     }
-  }).value();
+    catch(err) {
+      grunt.log.warn('Error occurred : ' + err);
+    }
+  };
 
-  return scriptsActuallyRun;
+  return _
+    .chain(grunt.file.expand(options.src).sort())
+    .filter(onlyNonStoredScripts)
+    .map(runScripts)
+    .value();
 }
